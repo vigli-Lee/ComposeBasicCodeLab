@@ -3,6 +3,7 @@ package com.vigli.deepdive.example.composebasiccodelab
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
@@ -37,10 +38,10 @@ private fun MyApp() {
 fun Greeting(name: String) {
     // Surface 와 같은 머터리얼 구성요소는 배경에 따라 텍스트 색상을 적절하게 변경해줌
     Surface(color = MaterialTheme.colors.primary) {
-        Text(
-            text = "Hello $name!",
-            modifier = Modifier.padding(24.dp)
-        )
+        Column(modifier = Modifier.padding(24.dp)) {
+            Text(text = "Hello")
+            Text(text = name)
+        }
     }
 }
 
